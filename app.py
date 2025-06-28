@@ -1,5 +1,6 @@
 # Importamos FastAPI
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 # Importar modelo base y motor de base de datos
 from database import Base, engine
@@ -18,6 +19,15 @@ app = FastAPI()
 app.title = 'ToDo API'
 app.description = 'REST API for ToDo App'
 app.version = '1.0.0'
+
+# Configurar CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Incluir las rutas de nuestra app
 app.include_router(tasks_router)
