@@ -2,14 +2,14 @@
 from fastapi import FastAPI
 
 # Importar modelo base y motor de base de datos
-# from database import Base, engine
+from database import Base, engine
 
 # Importar rutas de nuestra app
 from routes.task import router as tasks_router
 from routes.user import router as users_router
 
 # Crear tablas en base a los modelos de forma automatica
-# Base.metadata.create_all(engine)
+Base.metadata.create_all(engine)
 
 # Variable que contendra nuestra aplicacion de FastAPI
 app = FastAPI()
