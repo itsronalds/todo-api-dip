@@ -31,6 +31,7 @@ def create_task(task: TaskCreate, db: Session = Depends(get_db), task_payload: d
         user_id=task_payload['id'],
         title=task.title,
         description=task.description,
+        status=task.status.value,
     )
 
     # Registrar nueva tarea en base de datos
@@ -62,6 +63,7 @@ def update_task(id: int, task: TaskUpdate, db: Session = Depends(get_db)) -> dic
     db.query(Task).filter(Task.id == id).update({
         Task.title: task.title,
         Task.description: task.description,
+        Task.status: task.status,
     })
     
     # Guardar cambios de la tarea en base de datos

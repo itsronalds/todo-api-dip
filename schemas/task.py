@@ -3,6 +3,7 @@ from pydantic import BaseModel, Field
 
 from datetime import datetime
 from typing import Optional
+from enum import Enum
 
 
 '''
@@ -24,12 +25,20 @@ description
 '''
 
 
+class Status(Enum):
+    pending = 'pending'
+    completed = 'completed'
+
+
 class TaskBase(BaseModel):
     # El titulo debe ser string y debe tener una rango de caracteres entre 3-75
     title: str = Field(min_length=3, max_length=75)
 
     # La descripcion es opcional, pero si llega a venir debe ser string
     description: Optional[str]
+
+    # El status es un enum para que siempre sean los mismo valores
+    status: Status 
 
 
 class TaskRead(TaskBase):
