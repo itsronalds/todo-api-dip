@@ -26,14 +26,22 @@
    pip install alembic
    ```
 
-2. **Nuestro primer Revision: Generar tablas**
+2. **Iniciar Alembic**
+
+   ```bash
+   alembic init alembic
+   ```
+
+3. **Nuestro primer Revision: Generar tablas**
 
    - Generar registro de cambio
+
    ```bash
    alembic revision --autogenerate -m "Nombre del cambio"
    ```
 
    - Aplicar cambios
+
    ```bash
    alembic upgrade head
    ```
@@ -59,6 +67,7 @@
    ```
 
 3. **Configura la base de datos PostgreSQL:**
+
    - Crea una base de datos (por ejemplo, `todo_db`).
    - Configura las variables de entorno o el archivo `.env` con tus credenciales de conexión.
 
