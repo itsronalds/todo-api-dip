@@ -20,19 +20,13 @@
 
 ## Alembic
 
-1. **Instalar Alembic**
-
-   ```bash
-   pip install alembic
-   ```
-
-2. **Iniciar Alembic**
+1. **Iniciar Alembic**
 
    ```bash
    alembic init alembic
    ```
 
-3. **Nuestro primer Revision: Generar tablas**
+2. **Nuestro primer Revision: Generar tablas**
 
    - Generar registro de cambio
 
