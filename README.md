@@ -17,7 +17,6 @@
 - [Características Principales](#características-principales)
 - [Arquitectura del Proyecto](#arquitectura-del-proyecto)
 - [Instalación y Puesta en Marcha](#instalación-y-puesta-en-marcha)
-- [Migraciones de Base de Datos (Alembic)](#migraciones-de-base-de-datos-alembic)
 - [Uso Básico de la API](#uso-básico-de-la-api)
 - [Estructura de Carpetas](#estructura-de-carpetas)
 - [Tecnologías y Herramientas](#tecnologías-y-herramientas)
