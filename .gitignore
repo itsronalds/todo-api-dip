@@ -173,10 +173,6 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
-### Alembic ###
-alembic/
-alembic.ini
-
 ### Others ###
 notes.txt
 
